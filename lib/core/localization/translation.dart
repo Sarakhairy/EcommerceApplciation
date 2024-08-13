@@ -37,9 +37,18 @@ class MyTranslation extends Translations {
           "29": "اعادة كلمة المرور",
           "30": "التحقق من البريد الالكترونى",
           "31": "نجاح",
-          "32": "تم التحقق من بريدك الإلكترونى بنجاح وتم أنشاء الحساب بنجاح يمكنك الآن التوجة إلى صفحة تسجيل الدخول",
-          "33": "سجل الدخول"
-
+          "32":
+              "تم التحقق من بريدك الإلكترونى بنجاح وتم أنشاء الحساب بنجاح يمكنك الآن التوجة إلى صفحة تسجيل الدخول",
+          "33": "سجل الدخول",
+          "34": "اختر المنتج",
+          "35": "نملك 100 الف منتج متنوع\nتصفح متجرنا الإلكتروني واختر ما تحتاجه",
+          "36": "دفع سهل وآمن",
+          "37": "دفع سهل وآمن.\n موثوق به من قبل عملائنا في جميع أنحاء العالم.",
+          "38": "تتبع طلبك",
+          "39":
+              "تم استخدام أفضل أداة لتتبع طلبك.\n ستعرف مكان منتجك الحالي في أي وقت.",
+          "40": "توصيل سريع",
+          "41": "توصيل سريع وموثوق.\n نحرص على تسليم منتجك بأسرع وقت ممكن",
         },
         "en": {
           "1": "Choose Language",
@@ -64,7 +73,8 @@ class MyTranslation extends Translations {
           "19": "Get Verification Code",
           "20": "Verification Code",
           "21": "Check Code",
-          "22": "ُEnter the email associated with your account to change your password",
+          "22":
+              "ُEnter the email associated with your account to change your password",
           "23": "Please Enter The Digit Code Sent to",
           "24": "Reset Password",
           "25": "Please Enter The New Password",
@@ -74,8 +84,21 @@ class MyTranslation extends Translations {
           "29": "Re-Enter Password",
           "30": "Check Email",
           "31": "Success",
-          "32": "Your Email Has Been Successfully Verified, And Your Account Has Been Created Successfully. You Can Now Proceed To The Sign IN Page",
-          "33": "Sign In"
+          "32":
+              "Your Email Has Been Successfully Verified, And Your Account Has Been Created Successfully. You Can Now Proceed To The Sign IN Page",
+          "33 ": "Sign In",
+          "34": "Choose Product",
+          "35":
+              "We Have a 100k Product, Choose \n Your Product From Our \nE-commerce Shop",
+          "36": "Easy & Safe Payment",
+          "37":
+              "Easy Checkout and Safe Payment \n method. Trusted by our Customers from all over the world",
+          "38": "Track Your Order",
+          "39":
+              "Best tracker has been used for\ntrack your order. You will know where your product is at the moment.",
+          "40": "Fast Delivery",
+          "41":
+              "Reliable and fast Delivery. We\nDeliver your product the fastest way possible",
         }
       };
 }
