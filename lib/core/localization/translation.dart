@@ -49,6 +49,15 @@ class MyTranslation extends Translations {
               "تم استخدام أفضل أداة لتتبع طلبك.\n ستعرف مكان منتجك الحالي في أي وقت.",
           "40": "توصيل سريع",
           "41": "توصيل سريع وموثوق.\n نحرص على تسليم منتجك بأسرع وقت ممكن",
+          "42": "تم إنشاء الحساب بنجاح",
+          "43": "يرجى إدخال عنوان بريدك الإلكتروني لاستلام رمز التحقق",
+          "44":"تهانينا",
+          "45": "اسم المستخدم غير صالح",
+          "46": "البريد الإلكتروني غير صالح",
+          "47": "رقم الهاتف غير صالح",
+          "48": "لا يمكن أن يكون فارغًا",
+          "49": "القيمة لا يمكن أن تكون أقل من",
+          "50": "القيمة لا يمكن أن تكون أكبر من",
         },
         "en": {
           "1": "Choose Language",
@@ -85,8 +94,8 @@ class MyTranslation extends Translations {
           "30": "Check Email",
           "31": "Success",
           "32":
-              "Your Email Has Been Successfully Verified, And Your Account Has Been Created Successfully. You Can Now Proceed To The Sign IN Page",
-          "33 ": "Sign In",
+              "Your Email Has Been Successfully Verified, And Your Account Has Been Created Successfully. You Can Now Proceed To The Sign In Page",
+          "33": "Sign In",
           "34": "Choose Product",
           "35":
               "We Have a 100k Product, Choose \n Your Product From Our \nE-commerce Shop",
@@ -99,6 +108,15 @@ class MyTranslation extends Translations {
           "40": "Fast Delivery",
           "41":
               "Reliable and fast Delivery. We\nDeliver your product the fastest way possible",
+          "42": "Account Successfully created",
+          "43": "Please enter your email address to recive a verification code",
+          "44": "Congratulations",
+          "45":"not valid username",
+          "46": "not valid email",
+          "47":"not valid phone",
+          "48": "can't be empty",
+          "49": "value can't be less than",
+          "50": "value can't be bigger than",
         }
       };
 }

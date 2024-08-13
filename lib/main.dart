@@ -2,7 +2,6 @@ import 'package:ecommerce_application/core/constant/color.dart';
 import 'package:ecommerce_application/core/localization/changlocal.dart';
 import 'package:ecommerce_application/core/localization/translation.dart';
 import 'package:ecommerce_application/core/services/services.dart';
-import 'package:ecommerce_application/view/screen/auth/checkemail.dart';
 import 'package:ecommerce_application/view/screen/auth/forgetpassword.dart';
 import 'package:ecommerce_application/view/screen/auth/login.dart';
 import 'package:ecommerce_application/view/screen/auth/resetpassword.dart';
@@ -10,6 +9,7 @@ import 'package:ecommerce_application/view/screen/auth/signup.dart';
 import 'package:ecommerce_application/view/screen/auth/successresetpassword.dart';
 import 'package:ecommerce_application/view/screen/auth/successsingup.dart';
 import 'package:ecommerce_application/view/screen/auth/verifycode.dart';
+import 'package:ecommerce_application/view/screen/auth/verifycodesignup.dart';
 import 'package:ecommerce_application/view/screen/language.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_application/view/screen/onboarding.dart';
@@ -33,20 +33,7 @@ class MyApp extends StatelessWidget {
       locale: controller.language,
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        fontFamily: "PlayfairDisplay",
-        textTheme: const TextTheme(
-          headlineLarge: TextStyle(
-            color: ColorApp.black,
-            fontWeight: FontWeight.bold,
-            fontSize: 20,
-          ),
-          bodyLarge: TextStyle(
-              color: ColorApp.grey, fontSize: 15, fontWeight: FontWeight.bold),
-        ),
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: controller.appTheme,
       home: const Language(),
       routes: {
         "login": (context) => const Login(),
@@ -54,10 +41,11 @@ class MyApp extends StatelessWidget {
         "signup": (context)=> const SignUp(),
         "forgetpassword":(context)=> const ForgetPassword(),
         "verifycode": (context) => const VerifyCode(),
+        "verifycodesignup": (context) => const VerifyCodeSignUp(),
         "resetpassword" :  (context) => const ResetPassword(),
         "successresetpassword" :  (context) => const SuccessResetPassword(),
         "successsignup" :  (context) => const SuccessSingUp(),
-        "checkemail": (context)=> const CheckEmail(),
+
 
       },
     );

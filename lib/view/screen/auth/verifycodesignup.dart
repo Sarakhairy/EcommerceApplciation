@@ -1,30 +1,31 @@
 import 'package:ecommerce_application/core/constant/color.dart';
 import 'package:ecommerce_application/core/services/services.dart';
-import 'package:ecommerce_application/cotroller/checkemailcontroller.dart';
 import 'package:ecommerce_application/cotroller/forgetpasswordcontroller.dart';
 import 'package:ecommerce_application/cotroller/signupcontroller.dart';
+import 'package:ecommerce_application/cotroller/verifycodecontroller.dart';
+import 'package:ecommerce_application/cotroller/verifycodesignupcontroller.dart';
 import 'package:ecommerce_application/view/widget/auth/authoptions.dart';
 import 'package:ecommerce_application/view/widget/auth/cutombuttonauth.dart';
 import 'package:ecommerce_application/view/widget/auth/cutomtextformauth.dart';
 import 'package:ecommerce_application/view/widget/auth/logoauth.dart';
 import 'package:ecommerce_application/view/widget/auth/cutombuttonauth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 
-class CheckEmail extends StatelessWidget {
-  const CheckEmail({super.key});
+class VerifyCodeSignUp extends StatelessWidget {
+  const VerifyCodeSignUp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    CheckEmailControllerImp controller =
-        Get.put(CheckEmailControllerImp());
+    VerifyCodeSignUpControllerImp controller = Get.put(VerifyCodeSignUpControllerImp());
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.0,
         centerTitle: true,
         title: Text(
-          "30".tr,
+          "20".tr,
           style: Theme.of(context)
               .textTheme
               .headlineLarge!
@@ -37,45 +38,29 @@ class CheckEmail extends StatelessWidget {
         child: ListView(
           children: [
             Text(
-              "18".tr,
+              "23".tr,
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: ColorApp.black,
-                  fontSize: 26,
+                  fontSize: 20,
                   fontWeight: FontWeight.bold),
             ),
             SizedBox(
-              height: 20,
+              height: 50,
             ),
-             Container(
-                padding: EdgeInsets.symmetric(horizontal: 5),
-                child: Text(
-                  "22".tr,
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyLarge!
-                      .copyWith(color: ColorApp.grey),
-                )),
+            OtpTextField(
+              fieldHeight: 50,
+              borderRadius: BorderRadius.circular(10),
+              numberOfFields: 5,
+              borderColor: Colors.black,
+              showFieldAsBox: true,
+              onCodeChanged: (String code) {},
+              onSubmit: (String verificationCode) {
+                controller.ToSuccessSignUp();
+              },
+            ),
             SizedBox(
               height: 20,
-            ),
-            CustomTextFormAuth(
-                mycontroller: controller.email,
-                hint: 7,
-                label: 5,
-                iconData: Icons.email_outlined),
-            SizedBox(
-              height: 20,
-            ),
-
-            CutomButtonAuth(
-                text: "19".tr,
-                onPressed: () {
-                  controller.ToSuccessSignUp();
-                }),
-            SizedBox(
-              height: 5,
             ),
           ],
         ),

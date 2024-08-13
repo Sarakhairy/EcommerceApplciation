@@ -11,9 +11,16 @@ class SignUpControllerImp extends SignupController {
   late TextEditingController email;
   late TextEditingController password;
   late TextEditingController phone;
+  GlobalKey<FormState> formstate = GlobalKey<FormState>();
   @override
   SignUp() {
-    Get.offNamed("checkemail");
+    var formdata = formstate.currentState;
+    if (formdata!.validate()) {
+      Get.offNamed("verifycodesignup");
+      Get.delete<SignUpControllerImp>();
+    } else {
+      print("not valid");
+    }
   }
 
   @override
