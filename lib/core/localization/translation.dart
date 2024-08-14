@@ -58,6 +58,13 @@ class MyTranslation extends Translations {
           "48": "لا يمكن أن يكون فارغًا",
           "49": "القيمة لا يمكن أن تكون أقل من",
           "50": "القيمة لا يمكن أن تكون أكبر من",
+          "51": "استمر",
+          "52": "تنبيه",
+          "53": "هل تريد الخروج من التطبيق",
+          "54": "تأكيد",
+          "55": "إلغاء",
+
+
         },
         "en": {
           "1": "Choose Language",
@@ -117,6 +124,14 @@ class MyTranslation extends Translations {
           "48": "can't be empty",
           "49": "value can't be less than",
           "50": "value can't be bigger than",
+          "51": "Continue",
+          "52": "alert",
+          "53": 
+"Do you want to exit the app?",
+          "54": "Confirm",
+          "55": "Cancel",
+
+
         }
-      };
+              };
 }

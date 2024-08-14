@@ -1,6 +1,7 @@
 import 'package:ecommerce_application/core/constant/color.dart';
 import 'package:ecommerce_application/core/localization/changlocal.dart';
 import 'package:ecommerce_application/core/localization/translation.dart';
+import 'package:ecommerce_application/core/middleware/mymiddleware.dart';
 import 'package:ecommerce_application/core/services/services.dart';
 import 'package:ecommerce_application/view/screen/auth/forgetpassword.dart';
 import 'package:ecommerce_application/view/screen/auth/login.dart';
@@ -34,20 +35,21 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: controller.appTheme,
-      home: const Language(),
-      routes: {
-        "login": (context) => const Login(),
-        "onboarding": (context)=> const onBoarding(),
-        "signup": (context)=> const SignUp(),
-        "forgetpassword":(context)=> const ForgetPassword(),
-        "verifycode": (context) => const VerifyCode(),
-        "verifycodesignup": (context) => const VerifyCodeSignUp(),
-        "resetpassword" :  (context) => const ResetPassword(),
-        "successresetpassword" :  (context) => const SuccessResetPassword(),
-        "successsignup" :  (context) => const SuccessSingUp(),
-
-
-      },
+      
+      getPages: [
+        GetPage(name: "/", page:()=> Language(),middlewares: [
+          MyMiddleWare(),
+        ]),
+        GetPage(name: "/login", page:()=> Login()),
+        GetPage(name: "/onboarding", page:()=> onBoarding()),
+        GetPage(name:"/signup", page:()=>  SignUp()),
+        GetPage(name:"/forgetpassword", page:()=>  ForgetPassword()),
+        GetPage(name:"/verifycode", page:()=>  VerifyCode()),
+        GetPage(name: "/verifycodesignup", page:()=> VerifyCodeSignUp()),
+        GetPage(name:  "/resetpassword", page:()=> ResetPassword()),
+        GetPage(name:  "/successsignup", page:()=>SuccessSingUp()),
+        
+      ],
     );
   }
 }
