@@ -1,4 +1,6 @@
+import 'package:ecommerce_application/core/class/statusrequest.dart';
 import 'package:ecommerce_application/core/constant/color.dart';
+import 'package:ecommerce_application/core/constant/imageasset.dart';
 import 'package:ecommerce_application/core/services/services.dart';
 import 'package:ecommerce_application/cotroller/forgetpasswordcontroller.dart';
 import 'package:ecommerce_application/cotroller/signupcontroller.dart';
@@ -12,13 +14,14 @@ import 'package:ecommerce_application/view/widget/auth/cutombuttonauth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 
 class VerifyCodeSignUp extends StatelessWidget {
   const VerifyCodeSignUp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    VerifyCodeSignUpControllerImp controller = Get.put(VerifyCodeSignUpControllerImp());
+     Get.put(VerifyCodeSignUpControllerImp());
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -32,7 +35,9 @@ class VerifyCodeSignUp extends StatelessWidget {
               .copyWith(color: ColorApp.grey),
         ),
       ),
-      body: Container(
+      body: GetBuilder<VerifyCodeSignUpControllerImp>(builder: (controller)=>
+        controller.statusRequest == StatusRequest.loading?Center(child: Lottie.asset(ImageAsset.loading),):
+      Container(
         color: Colors.white,
         padding: EdgeInsets.all(15),
         child: ListView(
@@ -56,7 +61,7 @@ class VerifyCodeSignUp extends StatelessWidget {
               showFieldAsBox: true,
               onCodeChanged: (String code) {},
               onSubmit: (String verificationCode) {
-                controller.ToSuccessSignUp();
+                controller.ToSuccessSignUp(verificationCode);
               },
             ),
             SizedBox(
@@ -65,6 +70,7 @@ class VerifyCodeSignUp extends StatelessWidget {
           ],
         ),
       ),
+      )
     );
   }
 }

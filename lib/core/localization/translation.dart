@@ -63,8 +63,9 @@ class MyTranslation extends Translations {
           "53": "هل تريد الخروج من التطبيق",
           "54": "تأكيد",
           "55": "إلغاء",
-
-
+          "56": "رقم الهاتف أو البريد الإلكتروني موجود بالفعل",
+          "57":"رمز التحقق غير صحيح",
+          "58": "البريد الإلكتروني أو كلمة المرور غير صحيحة",
         },
         "en": {
           "1": "Choose Language",
@@ -125,11 +126,14 @@ class MyTranslation extends Translations {
           "49": "value can't be less than",
           "50": "value can't be bigger than",
           "51": "Continue",
-          "52": "alert",
+          "52": "Warning",
           "53": 
 "Do you want to exit the app?",
           "54": "Confirm",
           "55": "Cancel",
+          "56": "Phone Number or Email Already Exist",
+          "57": "Verify Code Not Correct",
+          "58": "Email Or Password Not Correct",
 
 
         }

@@ -33,6 +33,7 @@ class CustomTextFormAuth extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 30),
       child: TextFormField(
+        style: TextStyle(fontSize: 15,color: Colors.black),
         keyboardType: type == "phone"
             ? TextInputType.phone
             : type == "email"
@@ -45,7 +46,7 @@ class CustomTextFormAuth extends StatelessWidget {
         controller: mycontroller,
         decoration: InputDecoration(
           hintText: "$hint".tr,
-          hintStyle: TextStyle(fontSize: 15),
+          hintStyle: TextStyle(fontSize: 15,),
           label: Container(
               margin: EdgeInsets.symmetric(horizontal: 10),
               child: Text("$label".tr)),

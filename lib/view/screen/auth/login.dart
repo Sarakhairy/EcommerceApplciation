@@ -1,4 +1,6 @@
+import 'package:ecommerce_application/core/class/statusrequest.dart';
 import 'package:ecommerce_application/core/constant/color.dart';
+import 'package:ecommerce_application/core/constant/imageasset.dart';
 import 'package:ecommerce_application/core/functions/validinput.dart';
 import 'package:ecommerce_application/core/services/services.dart';
 import 'package:ecommerce_application/cotroller/logincontroller.dart';
@@ -10,13 +12,14 @@ import 'package:ecommerce_application/view/widget/auth/logoauth.dart';
 import 'package:ecommerce_application/view/widget/auth/cutombuttonauth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
 
   @override
   Widget build(BuildContext context) {
-    LoginControllerImp controller = Get.put(LoginControllerImp());
+    Get.put(LoginControllerImp());
     final PasswordController passcontroller = Get.put(PasswordController());
     return Scaffold(
       appBar: AppBar(
@@ -31,7 +34,9 @@ class Login extends StatelessWidget {
               .copyWith(color: ColorApp.grey),
         ),
       ),
-      body: Container(
+      body: GetBuilder<LoginControllerImp>(builder: (controller)=>
+      controller.statusRequest== StatusRequest.loading? Center(child: Lottie.asset(ImageAsset.loading),):
+       Container(
         color: Colors.white,
         padding: EdgeInsets.all(15),
         child: Form(
@@ -131,7 +136,7 @@ class Login extends StatelessWidget {
             ],
           ),
         ),
-      ),
+      ),)
     );
   }
 }
