@@ -1,27 +1,47 @@
+import 'package:ecommerce_application/core/class/statusrequest.dart';
+import 'package:ecommerce_application/core/functions/handlingdata.dart';
+import 'package:ecommerce_application/data/datasource/remote/auth/checkemail.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 abstract class ForgetPasswordController extends GetxController {
   CheckEmail();
-  ToVerifyCode();
+
 }
 
 class ForgetPasswordControllerImp extends ForgetPasswordController {
+  CheckEmailData checkEmailData = CheckEmailData(Get.find());
+StatusRequest statusRequest = StatusRequest.none;
   late TextEditingController email;
   GlobalKey<FormState> formstate = GlobalKey<FormState>();
   @override
-  CheckEmail() {}
-
-  @override
-  ToVerifyCode() {
-    var formdata = formstate.currentState;
-    if (formdata!.validate()) {
-       Get.toNamed("verifycode");
-    } else {
+  CheckEmail() async{
+    if(formstate.currentState!.validate()){
+        statusRequest = StatusRequest.loading;
+      update();
+      var response = await checkEmailData.postData(email.text);
+      statusRequest = handlingData(response);
+      if (StatusRequest.success == statusRequest) {
+        if (response['status'] == "success") {
+          Get.toNamed("verifycode",arguments: {
+            "email": email.text,
+          });
+        } else {
+          Get.defaultDialog(
+            title: "52".tr,
+            middleText: "59".tr,
+            
+          );
+          statusRequest = StatusRequest.failure;
+        }
+      }
+      update();
+    }else {
       print("not valid");
     }
-  
   }
+
+
 
   @override
   void onInit() {

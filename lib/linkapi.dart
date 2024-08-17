@@ -5,4 +5,7 @@ class AppLink {
   static const String signUp = "$server/signup.php";
   static const String logIn = "$server/login.php";
   static const String verifyCodeSignUp = "$server/verifycode.php";
+  static const String checkemail = "$server/checkemail.php";
+  static const String resetpassword = "$server/resetpassword.php";
+  static const String verifycodeforgetpassword = "$server/verifycoderesetpassword.php";
 }

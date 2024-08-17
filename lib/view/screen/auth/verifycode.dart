@@ -8,6 +8,7 @@ import 'package:ecommerce_application/view/widget/auth/cutombuttonauth.dart';
 import 'package:ecommerce_application/view/widget/auth/cutomtextformauth.dart';
 import 'package:ecommerce_application/view/widget/auth/logoauth.dart';
 import 'package:ecommerce_application/view/widget/auth/cutombuttonauth.dart';
+import 'package:ecommerce_application/view/widget/handlingdataview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
@@ -17,7 +18,7 @@ class VerifyCode extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    VerifyCodeControllerImp controller = Get.put(VerifyCodeControllerImp());
+   Get.put(VerifyCodeControllerImp());
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -31,13 +32,13 @@ class VerifyCode extends StatelessWidget {
               .copyWith(color: ColorApp.grey),
         ),
       ),
-      body: Container(
+      body: GetBuilder<VerifyCodeControllerImp>(builder: (controller)=> HadnlingDataRequest(statusRequest: controller.statusRequest,widget:Container(
         color: Colors.white,
         padding: EdgeInsets.all(15),
         child: ListView(
           children: [
             Text(
-              "23".tr,
+              "23".tr + " " + "${controller.email}",
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: ColorApp.black,
@@ -55,7 +56,7 @@ class VerifyCode extends StatelessWidget {
               showFieldAsBox: true,
               onCodeChanged: (String code) {},
               onSubmit: (String verificationCode) {
-                controller.ToResetPassword();
+                controller.CheckCode(verificationCode);
               },
             ),
             SizedBox(
@@ -63,7 +64,8 @@ class VerifyCode extends StatelessWidget {
             ),
           ],
         ),
-      ),
+      )),
+      )
     );
   }
 }

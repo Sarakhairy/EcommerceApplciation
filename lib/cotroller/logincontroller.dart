@@ -14,7 +14,7 @@ abstract class LoginController extends GetxController {
 class LoginControllerImp extends LoginController {
   late TextEditingController email;
   late TextEditingController password;
-  StatusRequest? statusRequest;
+  StatusRequest statusRequest = StatusRequest.none;
   LoginData loginData = LoginData(Get.find());
   GlobalKey<FormState> formstate = GlobalKey<FormState>();
   @override

@@ -13,7 +13,7 @@ class VerifyCodeSignUpControllerImp extends VerifyCodeSignUpController {
   VerifyCodeSignUpData verifyCodeSignUpData = VerifyCodeSignUpData(Get.find());
 
   String? email;
-  StatusRequest? statusRequest;
+  StatusRequest statusRequest = StatusRequest.none;
   @override
   CheckCode() {}
 

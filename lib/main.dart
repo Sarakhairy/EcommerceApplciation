@@ -51,6 +51,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: "/verifycodesignup", page:()=> VerifyCodeSignUp()),
         GetPage(name:  "/resetpassword", page:()=> ResetPassword()),
         GetPage(name:  "/successsignup", page:()=>SuccessSingUp()),
+        GetPage(name:  "/successresetpassword", page:()=>SuccessResetPassword()),
         GetPage(name:  "/home", page:()=>Home()),
         
       ],

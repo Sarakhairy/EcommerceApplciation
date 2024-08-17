@@ -38,7 +38,7 @@ class MyTranslation extends Translations {
           "30": "التحقق من البريد الالكترونى",
           "31": "نجاح",
           "32":
-              "تم التحقق من بريدك الإلكترونى بنجاح وتم أنشاء الحساب بنجاح يمكنك الآن التوجة إلى صفحة تسجيل الدخول",
+              "تم التحقق من بريدك الإلكترونى بنجاح. يمكنك الآن التوجة إلى صفحة تسجيل الدخول",
           "33": "سجل الدخول",
           "34": "اختر المنتج",
           "35": "نملك 100 الف منتج متنوع\nتصفح متجرنا الإلكتروني واختر ما تحتاجه",
@@ -66,6 +66,9 @@ class MyTranslation extends Translations {
           "56": "رقم الهاتف أو البريد الإلكتروني موجود بالفعل",
           "57":"رمز التحقق غير صحيح",
           "58": "البريد الإلكتروني أو كلمة المرور غير صحيحة",
+          "59":"البريد الإلكتروني غير موجود",
+          "60": "كلمة المرور غير متطابقة",
+          "61": "حاول مرة اخرى",
         },
         "en": {
           "1": "Choose Language",
@@ -102,7 +105,7 @@ class MyTranslation extends Translations {
           "30": "Check Email",
           "31": "Success",
           "32":
-              "Your Email Has Been Successfully Verified, And Your Account Has Been Created Successfully. You Can Now Proceed To The Sign In Page",
+              "Your Email Has Been Successfully Verified. You Can Now Proceed To The Sign In Page",
           "33": "Sign In",
           "34": "Choose Product",
           "35":
@@ -134,7 +137,9 @@ class MyTranslation extends Translations {
           "56": "Phone Number or Email Already Exist",
           "57": "Verify Code Not Correct",
           "58": "Email Or Password Not Correct",
-
+          "59": "Email Not found",
+          "60": "Password Not Match",
+          "61": "Try Again",
 
         }
               };
