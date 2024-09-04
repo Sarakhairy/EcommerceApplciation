@@ -1,11 +1,12 @@
 import 'package:ecommerce_application/core/class/statusrequest.dart';
 import 'package:ecommerce_application/core/functions/handlingdata.dart';
 import 'package:ecommerce_application/data/datasource/remote/auth/verifycodesignup.dart';
-import 'package:flutter/material.dart';
+
 import 'package:get/get.dart';
 
 abstract class VerifyCodeSignUpController extends GetxController {
   CheckCode();
+  reSend();
   ToSuccessSignUp(String verifycodesignup);
 }
 
@@ -23,9 +24,9 @@ class VerifyCodeSignUpControllerImp extends VerifyCodeSignUpController {
     update();
     var response =
         await verifyCodeSignUpData.postData(email!, verifycodesignup);
-      
+
     statusRequest = handlingData(response);
-   
+
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {
         Get.toNamed("successsignup");
@@ -44,5 +45,10 @@ class VerifyCodeSignUpControllerImp extends VerifyCodeSignUpController {
   void onInit() {
     email = Get.arguments['email'];
     super.onInit();
+  }
+
+  @override
+  reSend() {
+    verifyCodeSignUpData.resendData(email!);
   }
 }

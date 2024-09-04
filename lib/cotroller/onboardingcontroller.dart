@@ -1,6 +1,6 @@
 import 'package:ecommerce_application/core/services/services.dart';
 import 'package:ecommerce_application/data/datasource/static/static.dart';
-import 'package:ecommerce_application/main.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -17,11 +17,11 @@ class OnBoardingControllerImp extends OnBoardingController {
   next() {
     currentPage++;
     if (currentPage > onBoardingList.length - 1) {
-      myServices.sharedPreferences.setBool("onboarding",true);
+      myServices.sharedPreferences.setString("step", "1");
       Get.offAllNamed("login");
     } else {
       pageController.animateToPage(currentPage,
-          duration: Duration(milliseconds: 500), curve: Curves.easeInOut);
+          duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
     }
   }
 

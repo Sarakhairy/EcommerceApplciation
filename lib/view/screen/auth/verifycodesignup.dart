@@ -1,21 +1,12 @@
-import 'package:ecommerce_application/core/class/statusrequest.dart';
 import 'package:ecommerce_application/core/constant/color.dart';
-import 'package:ecommerce_application/core/constant/imageasset.dart';
-import 'package:ecommerce_application/core/services/services.dart';
-import 'package:ecommerce_application/cotroller/forgetpasswordcontroller.dart';
-import 'package:ecommerce_application/cotroller/signupcontroller.dart';
-import 'package:ecommerce_application/cotroller/verifycodecontroller.dart';
+
 import 'package:ecommerce_application/cotroller/verifycodesignupcontroller.dart';
-import 'package:ecommerce_application/view/widget/auth/authoptions.dart';
 import 'package:ecommerce_application/view/widget/auth/cutombuttonauth.dart';
-import 'package:ecommerce_application/view/widget/auth/cutomtextformauth.dart';
-import 'package:ecommerce_application/view/widget/auth/logoauth.dart';
-import 'package:ecommerce_application/view/widget/auth/cutombuttonauth.dart';
+
 import 'package:ecommerce_application/view/widget/handlingdataview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
-import 'package:lottie/lottie.dart';
 
 class VerifyCodeSignUp extends StatelessWidget {
   const VerifyCodeSignUp({super.key});
@@ -37,39 +28,46 @@ class VerifyCodeSignUp extends StatelessWidget {
           ),
         ),
         body: GetBuilder<VerifyCodeSignUpControllerImp>(
-          builder: (controller) => HadnlingDataRequest(statusRequest: controller.statusRequest,widget: Container(
-                  color: Colors.white,
-                  padding: EdgeInsets.all(15),
-                  child: ListView(
-                    children: [
-                      Text(
-                        "23".tr + " " + "${controller.email}",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: ColorApp.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(
-                        height: 50,
-                      ),
-                      OtpTextField(
-                        fieldHeight: 50,
-                        borderRadius: BorderRadius.circular(10),
-                        numberOfFields: 5,
-                        borderColor: Colors.black,
-                        showFieldAsBox: true,
-                        onCodeChanged: (String code) {},
-                        onSubmit: (String verificationCode) {
-                          controller.ToSuccessSignUp(verificationCode);
-                        },
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                    ],
-                  ),
-                )),
+          builder: (controller) => HadnlingDataRequest(
+              statusRequest: controller.statusRequest,
+              widget: Container(
+                color: Colors.white,
+                padding: const EdgeInsets.all(15),
+                child: ListView(
+                  children: [
+                    Text(
+                      "23".tr + " ${controller.email}",
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                          color: ColorApp.black,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    OtpTextField(
+                      fieldHeight: 50,
+                      borderRadius: BorderRadius.circular(10),
+                      numberOfFields: 5,
+                      borderColor: Colors.black,
+                      showFieldAsBox: true,
+                      onCodeChanged: (String code) {},
+                      onSubmit: (String verificationCode) {
+                        controller.ToSuccessSignUp(verificationCode);
+                      },
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    CutomButtonAuth(
+                        text: "65".tr,
+                        onPressed: () {
+                          controller.reSend();
+                        })
+                  ],
+                ),
+              )),
         ));
   }
 }

@@ -1,19 +1,19 @@
-import 'package:ecommerce_application/core/class/statusrequest.dart';
+
 import 'package:ecommerce_application/core/constant/color.dart';
-import 'package:ecommerce_application/core/constant/imageasset.dart';
+
 import 'package:ecommerce_application/core/functions/validinput.dart';
-import 'package:ecommerce_application/core/services/services.dart';
+
 import 'package:ecommerce_application/cotroller/logincontroller.dart';
 import 'package:ecommerce_application/cotroller/passwordcontroller.dart';
 import 'package:ecommerce_application/view/widget/auth/authoptions.dart';
 import 'package:ecommerce_application/view/widget/auth/cutombuttonauth.dart';
 import 'package:ecommerce_application/view/widget/auth/cutomtextformauth.dart';
 import 'package:ecommerce_application/view/widget/auth/logoauth.dart';
-import 'package:ecommerce_application/view/widget/auth/cutombuttonauth.dart';
+
 import 'package:ecommerce_application/view/widget/handlingdataview.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lottie/lottie.dart';
+
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -39,25 +39,25 @@ class Login extends StatelessWidget {
           builder: (controller)=>
                HadnlingDataRequest(statusRequest: controller.statusRequest,widget:  Container(
                   color: Colors.white,
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   child: Form(
                     key: controller.formstate,
                     child: ListView(
                       children: [
-                        LogoAuth(),
+                        const LogoAuth(),
                         Text(
                           "3".tr,
                           textAlign: TextAlign.center,
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: ColorApp.black,
                               fontSize: 26,
                               fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         Container(
-                            padding: EdgeInsets.symmetric(horizontal: 5),
+                            padding: const EdgeInsets.symmetric(horizontal: 5),
                             child: Text(
                               "4".tr,
                               textAlign: TextAlign.center,
@@ -66,7 +66,7 @@ class Login extends StatelessWidget {
                                   .bodyLarge!
                                   .copyWith(color: ColorApp.grey),
                             )),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         CustomTextFormAuth(
@@ -82,7 +82,7 @@ class Login extends StatelessWidget {
                           enablesuggestions: true,
                           autoCorrect: true,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Obx(() => CustomTextFormAuth(
@@ -101,11 +101,11 @@ class Login extends StatelessWidget {
                               autoCorrect: false,
                               onPressed: passcontroller.toggleObscureText,
                             )),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         Container(
-                          padding: EdgeInsets.symmetric(horizontal: 30),
+                          padding: const EdgeInsets.symmetric(horizontal: 30),
                           child: InkWell(
                             onTap: () {
                               controller.ToForgetPassword();
@@ -113,11 +113,11 @@ class Login extends StatelessWidget {
                             child: Text(
                               "9".tr,
                               textAlign: TextAlign.end,
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: const TextStyle(fontWeight: FontWeight.bold),
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         CutomButtonAuth(
@@ -125,7 +125,7 @@ class Login extends StatelessWidget {
                             onPressed: () {
                               controller.Login();
                             }),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         AuthOptions(

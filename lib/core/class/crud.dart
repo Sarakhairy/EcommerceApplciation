@@ -14,12 +14,12 @@ class Crud {
           Map responsebody = jsonDecode(response.body);
           return Right(responsebody);
         } else {
-          return Left(StatusRequest.serverfailure);
+          return const Left(StatusRequest.serverfailure);
         }
       } else {
         return const Left(StatusRequest.offlinefailure);
       }
-    } catch (_) {
+    } catch (error) {
       return const Left(StatusRequest.serverfailure);
     }
   }

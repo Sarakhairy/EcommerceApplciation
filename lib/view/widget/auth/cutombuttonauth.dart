@@ -9,14 +9,14 @@ class CutomButtonAuth extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 30),
+      padding: const EdgeInsets.symmetric(horizontal: 30),
       child: MaterialButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         onPressed: onPressed,
-      padding: EdgeInsets.symmetric(vertical: 10),
-      child: Text(text,style: TextStyle(fontWeight: FontWeight.bold),),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       color: ColorApp.primaryColor,
       textColor: Colors.white,
+      child: Text(text,style: const TextStyle(fontWeight: FontWeight.bold),),
       ),
     );
   }

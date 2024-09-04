@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "102419447825",
+    "project_id": "orioncart-2368e",
+    "storage_bucket": "orioncart-2368e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102419447825:android:ce8c59c75ebb23d3c2b1b0",
+        "android_client_info": {
+          "package_name": "com.example.ecommerce_application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfpKMY2DMw12BK342ZDwJQobnUto1BJlc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

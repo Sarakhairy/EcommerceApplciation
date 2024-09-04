@@ -31,9 +31,9 @@ class CustomTextFormAuth extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 30),
+      padding: const EdgeInsets.symmetric(horizontal: 30),
       child: TextFormField(
-        style: TextStyle(fontSize: 15,color: Colors.black),
+        style: const TextStyle(fontSize: 15,color: Colors.black),
         keyboardType: type == "phone"
             ? TextInputType.phone
             : type == "email"
@@ -46,16 +46,16 @@ class CustomTextFormAuth extends StatelessWidget {
         controller: mycontroller,
         decoration: InputDecoration(
           hintText: "$hint".tr,
-          hintStyle: TextStyle(fontSize: 15,),
+          hintStyle: const TextStyle(fontSize: 15,),
           label: Container(
-              margin: EdgeInsets.symmetric(horizontal: 10),
+              margin: const EdgeInsets.symmetric(horizontal: 10),
               child: Text("$label".tr)),
           suffixIcon: IconButton(icon: Icon(iconData),onPressed: onPressed,),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(20),
           ),
           floatingLabelBehavior: FloatingLabelBehavior.always,
-          contentPadding: EdgeInsets.symmetric(vertical: 5, horizontal: 30),
+          contentPadding: const EdgeInsets.symmetric(vertical: 5, horizontal: 30),
         ),
       ),
     );

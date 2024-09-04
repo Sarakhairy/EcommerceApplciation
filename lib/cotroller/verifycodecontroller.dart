@@ -1,7 +1,7 @@
 import 'package:ecommerce_application/core/class/statusrequest.dart';
 import 'package:ecommerce_application/core/functions/handlingdata.dart';
 import 'package:ecommerce_application/data/datasource/remote/auth/verifycode.dart';
-import 'package:flutter/material.dart';
+
 import 'package:get/get.dart';
 
 abstract class VerifyCodeController extends GetxController {

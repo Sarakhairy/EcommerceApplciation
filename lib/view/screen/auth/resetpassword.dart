@@ -1,15 +1,12 @@
 import 'package:ecommerce_application/core/constant/color.dart';
 import 'package:ecommerce_application/core/functions/validinput.dart';
-import 'package:ecommerce_application/core/services/services.dart';
-import 'package:ecommerce_application/cotroller/forgetpasswordcontroller.dart';
+
 import 'package:ecommerce_application/cotroller/passwordcontroller.dart';
 import 'package:ecommerce_application/cotroller/resetcodecontroller.dart';
-import 'package:ecommerce_application/cotroller/signupcontroller.dart';
-import 'package:ecommerce_application/view/widget/auth/authoptions.dart';
+
 import 'package:ecommerce_application/view/widget/auth/cutombuttonauth.dart';
 import 'package:ecommerce_application/view/widget/auth/cutomtextformauth.dart';
-import 'package:ecommerce_application/view/widget/auth/logoauth.dart';
-import 'package:ecommerce_application/view/widget/auth/cutombuttonauth.dart';
+
 import 'package:ecommerce_application/view/widget/handlingdataview.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -39,7 +36,7 @@ class ResetPassword extends StatelessWidget {
               statusRequest: controller.statusRequest,
               widget: Container(
                 color: Colors.white,
-                padding: EdgeInsets.all(15),
+                padding: const EdgeInsets.all(15),
                 child: Form(
                   key: controller.formstate,
                   child: ListView(
@@ -47,12 +44,12 @@ class ResetPassword extends StatelessWidget {
                       Text(
                         "25".tr,
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: ColorApp.black,
                             fontSize: 20,
                             fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(
+                     const SizedBox(
                         height: 30,
                       ),
                       Obx(() => CustomTextFormAuth(
@@ -71,7 +68,7 @@ class ResetPassword extends StatelessWidget {
                             autoCorrect: false,
                             onPressed: passcontroller.toggleObscureText,
                           )),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Obx(() => CustomTextFormAuth(
@@ -90,10 +87,10 @@ class ResetPassword extends StatelessWidget {
                             autoCorrect: false,
                             onPressed: passcontroller.toggleObscureText,
                           )),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       CutomButtonAuth(
@@ -101,7 +98,7 @@ class ResetPassword extends StatelessWidget {
                           onPressed: () {
                             controller.resetpassword();
                           }),
-                      SizedBox(
+                      const SizedBox(
                         height: 5,
                       ),
                     ],

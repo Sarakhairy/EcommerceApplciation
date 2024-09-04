@@ -18,10 +18,10 @@ class LocaleController extends GetxController {
   @override
   void onInit() {
     if (myServices.sharedPreferences.getString("lang") == "ar") {
-      language = Locale("ar");
+      language = const Locale("ar");
       appTheme = arabicTheme;
     } else if (myServices.sharedPreferences.getString("lang") == "en") {
-      language = Locale("en");
+      language = const Locale("en");
       appTheme = englishTheme;
     } else {
       language = Locale(Get.deviceLocale!.languageCode);

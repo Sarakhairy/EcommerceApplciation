@@ -14,13 +14,13 @@ class AuthOptions extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text("$text".tr),
-        SizedBox(
+        const SizedBox(
           width: 5,
         ),
         InkWell(
           onTap: onTap,
           child: Text("$inkWellText".tr,
-              style: TextStyle(
+              style: const TextStyle(
                   fontWeight: FontWeight.bold, color: ColorApp.primaryColor)),
         )
       ],

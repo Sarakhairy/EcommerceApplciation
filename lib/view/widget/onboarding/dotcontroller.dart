@@ -17,7 +17,7 @@ class DotControllerOnBoarding extends StatelessWidget {
                   onBoardingList.length,
                   (i) => AnimatedContainer(
                     margin: const EdgeInsets.only(right: 5),
-                    duration: Duration(milliseconds: 500),
+                    duration: const Duration(milliseconds: 500),
                     width: controller.currentPage==i?20:6,
                     height: 6,
                     decoration: BoxDecoration(

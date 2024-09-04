@@ -1,19 +1,18 @@
-import 'package:ecommerce_application/core/class/statusrequest.dart';
+
 import 'package:ecommerce_application/core/constant/color.dart';
-import 'package:ecommerce_application/core/constant/imageasset.dart';
+
 import 'package:ecommerce_application/core/functions/validinput.dart';
-import 'package:ecommerce_application/core/services/services.dart';
+
 import 'package:ecommerce_application/cotroller/forgetpasswordcontroller.dart';
-import 'package:ecommerce_application/cotroller/signupcontroller.dart';
-import 'package:ecommerce_application/view/widget/auth/authoptions.dart';
+
+
 import 'package:ecommerce_application/view/widget/auth/cutombuttonauth.dart';
 import 'package:ecommerce_application/view/widget/auth/cutomtextformauth.dart';
-import 'package:ecommerce_application/view/widget/auth/logoauth.dart';
-import 'package:ecommerce_application/view/widget/auth/cutombuttonauth.dart';
+
 import 'package:ecommerce_application/view/widget/handlingdataview.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lottie/lottie.dart';
+
 
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({super.key});
@@ -37,7 +36,7 @@ class ForgetPassword extends StatelessWidget {
         body: GetBuilder<ForgetPasswordControllerImp>(
           builder: (controller) => HadnlingDataRequest(statusRequest: controller.statusRequest,widget: Container(
                   color: Colors.white,
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   child: Form(
                     key: controller.formstate,
                     child: ListView(
@@ -45,16 +44,16 @@ class ForgetPassword extends StatelessWidget {
                         Text(
                           "18".tr,
                           textAlign: TextAlign.center,
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: ColorApp.black,
                               fontSize: 26,
                               fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Container(
-                            padding: EdgeInsets.symmetric(horizontal: 5),
+                            padding: const EdgeInsets.symmetric(horizontal: 5),
                             child: Text(
                               "22".tr,
                               textAlign: TextAlign.center,
@@ -63,7 +62,7 @@ class ForgetPassword extends StatelessWidget {
                                   .bodyLarge!
                                   .copyWith(color: ColorApp.grey),
                             )),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         CustomTextFormAuth(
@@ -79,7 +78,7 @@ class ForgetPassword extends StatelessWidget {
                           enablesuggestions: true,
                           autoCorrect: true,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         CutomButtonAuth(
@@ -87,7 +86,7 @@ class ForgetPassword extends StatelessWidget {
                             onPressed: () {
                               controller.CheckEmail();
                             }),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                       ],

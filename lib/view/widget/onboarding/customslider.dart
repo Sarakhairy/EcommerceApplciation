@@ -1,4 +1,4 @@
-import 'package:ecommerce_application/core/constant/color.dart';
+
 import 'package:ecommerce_application/data/datasource/static/static.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -20,10 +20,10 @@ class CustomSliderOnBoarding extends GetView<OnBoardingControllerImp> {
           Text(onBoardingList[i].title!,
               style: Theme.of(context).textTheme.headlineLarge
               ),
-          SizedBox(height: 50),
+          const SizedBox(height: 50),
           Image.asset(onBoardingList[i].image!,
               width: 200, height: 230, fit: BoxFit.fill),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Container(
               width: double.infinity,
               alignment: Alignment.center,

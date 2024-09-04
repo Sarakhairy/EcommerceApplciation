@@ -25,30 +25,30 @@ class SuccessSingUp extends StatelessWidget {
         ),
       ),
       body: Container(
-        padding: EdgeInsets.all(15),
+        padding: const EdgeInsets.all(15),
         child: Column(
           children: [
-            Center(
+            const Center(
               child: Icon(Icons.check_circle_outline,
                   size: 200, color: ColorApp.primaryColor),
             ),
             Text(
               "44".tr,
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                   color: ColorApp.black,
                   fontSize: 26,
                   fontWeight: FontWeight.bold),
             ),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
               child: Text(
                 "32".tr,
                 textAlign: TextAlign.center,
               ),
             ),
-            Spacer(),
-            Container(
+            const Spacer(),
+            SizedBox(
               width: double.infinity,
               child: CutomButtonAuth(
                   text: "33".tr,
@@ -56,7 +56,7 @@ class SuccessSingUp extends StatelessWidget {
                     controller.ToLogin();
                   }),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
           ],
